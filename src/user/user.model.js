@@ -1,3 +1,3 @@
-let User = [];
+let User = ['Pokemon Go', 'Candy Crush', 'Bejeweled', 'Angry Birds'];
 
-module.expoerts = User;
+module.exports = User;

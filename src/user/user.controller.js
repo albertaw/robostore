@@ -1,4 +1,4 @@
-let User = require('./user.model');
+let users = require('./user.model');
 
 module.exports = {
 	create,
@@ -32,7 +32,7 @@ function remove(req, res, next) {
 }
 
 function readAll(req, res, next) {
-	res.send('get all users');
+	res.send(users);
 }
 
 function updateAll(req, res, next) {
