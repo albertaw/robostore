@@ -3,7 +3,6 @@ let User = require('./user.model');
 module.exports = {
 	create,
 	read,
-	readUserItems,
 	update,
 	remove,
 	readAll,
@@ -17,10 +16,6 @@ function create(req, res, next) {
 
 function read(req, res, next) {
 	res.send('read user')
-}
-
-function readUserItems(req, res, next) {
-	res.send('read user items');
 }
 
 function update(req, res, next) {
