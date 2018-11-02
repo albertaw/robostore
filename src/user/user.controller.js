@@ -32,7 +32,7 @@ function remove(req, res, next) {
 }
 
 function readAll(req, res, next) {
-	res.send('remove all users');
+	res.send('get all users');
 }
 
 function updateAll(req, res, next) {
