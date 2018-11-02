@@ -1,4 +1,4 @@
-let users = require('./user.model');
+let User = require('./user.model');
 
 module.exports = {
 	create,
@@ -32,7 +32,13 @@ function remove(req, res, next) {
 }
 
 function readAll(req, res, next) {
-	res.send(users);
+	//get the users who are merchants
+	let users = User.filter(function(user) {
+		console.log(user.role)
+		return user.role == 'developer';
+	});
+
+	res.json(users);
 }
 
 function updateAll(req, res, next) {

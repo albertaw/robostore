@@ -12,7 +12,7 @@ export default class UserListPage extends Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://localhost:5000/users')
+		axios.get('http://localhost:4000/users')
 		.then(response => this.setState({users: response.data}));
 	}
 

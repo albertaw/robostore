@@ -5,7 +5,7 @@ const http = require('http'),
 
 const app = express();
 
-app.set('port', process.env.PORT || 5000)
+app.set('port', process.env.PORT || 4000)
 app.use(userRoutes);
 app.use(express.static(path.join(__dirname, 'app/build')));
 
