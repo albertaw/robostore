@@ -4,7 +4,7 @@ function ItemDetail(props) {
 	return (
 		<li>
 			<h3>{props.name}</h3>
-			<img src={props.url} alt={props.name} />
+			<img src={props.src} alt={props.name} />
 		</li>
 	)
 }
