@@ -1,19 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import UserDetail from './UserDetail';
 function UserList(props) {
-	let userItems = props.users.map(function(user){
-		let name = user.name.replace(/\s/g, '');
-		const path = 'users/' + name;
-		return (
-			<li>
-				<Link to={path}>{user.name}</Link>
-			</li>
-		)
-	});
+	let users = props.users.map((user) =>
+		<UserDetail
+			key={user.userId}
+			name={user.name} />
+	);
 
 	return (
-		<ul>{userItems}</ul>
+		<ul>{users}</ul>
 	)
 }
 

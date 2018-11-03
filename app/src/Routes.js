@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import UserListPage from './pages/UserListPage';
 import UserDetailPage from './pages/UserDetailPage';
 import ItemListPage from './pages/ItemListPage';
+import ItemDetailPage from './pages/ItemDetailPage';
 
 function Routes() {
 	return (
@@ -10,7 +11,8 @@ function Routes() {
 			<div>
 				<Route exact path='/' component={UserListPage} />
 				<Route path='/users/:id' component={UserDetailPage} />
-				<Route path='/items' component={ItemListPage} />
+				<Route exact path='/items' component={ItemListPage} />
+				<Route path='/items/:id' component={ItemDetailPage} />
 			</div>
 		</Router>
 	)
