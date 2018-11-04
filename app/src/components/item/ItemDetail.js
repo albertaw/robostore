@@ -5,9 +5,14 @@ function ItemDetail(props) {
 	let path = '/items/' + props.id; 
 	
 	return (
-		<li>
-			<Link to={path}><h3>{props.name}</h3></Link>
-			<img src={props.src} alt={props.name} />
+		<li class="row">
+			<div class="col">
+				<img src={props.src} alt={props.name} />
+			</div>
+			<div class="col-9">
+				<Link to={path}><h3>{props.name}</h3></Link>
+				<p>{props.cost}</p>
+			</div>
 		</li>
 	)
 }

@@ -7,12 +7,13 @@ function ItemList(props) {
 			key={item.itemId}
 			id={item.itemId}
 			name={item.name}
+			cost={item.cost}
 			src={item.url}
 			alt={item.name} />
 	);
 
 	return (
-		<ul>{items}</ul>
+		<ul class="item-list">{items}</ul>
 	)
 
 }

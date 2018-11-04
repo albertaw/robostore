@@ -1,19 +1,28 @@
-.container {
-	width: 90%;
-	margin: 0 auto;
+h1, h2 {
+	color: #000;
 }
 
 .menu-top.light-theme {
   border-bottom: 0;
 }
 
-.user-list {
+.user-list, .item-list {
 	list-style-type: none;
 }
 
 .user-list li {
 	margin-bottom: 16px;
 }
+
+.item-list img {
+	width: 100px;
+}
+
+.item-list li a {
+	text-decoration: none;
+	color: #000;
+}
+
 .yellow-bg {
 	background-color: #FFD400;
 }

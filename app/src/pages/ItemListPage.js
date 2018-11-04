@@ -19,8 +19,16 @@ export default class ItemListPage extends Component {
 	render() {
 		return (
 			<App>
-				<h1>I am the item list page</h1>
-				<ItemList items={this.state.items} />
+				<div class="bg page-header yellow-bg">
+					<div class="container">
+						<h1>Items</h1>
+					</div>
+				</div>
+				<div class="section">
+					<div class="container">
+						<ItemList items={this.state.items} />
+					</div>
+				</div>
 			</App>
 		)
 	}
