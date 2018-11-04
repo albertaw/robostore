@@ -23,7 +23,6 @@ class UserDetailPage extends Component {
 			.then(axios.spread((items, user) => {
 				this.setState({userItems: items.data});
 				this.setState({user: user.data});
-				console.log(this.state.user)
 			}))
 			.catch(error => console.log(error));
 	}

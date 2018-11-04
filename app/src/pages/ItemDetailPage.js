@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import App from '../App';
 import UserList from '../components/user/UserList';
-import ItemDetail from '../components/item/ItemDetail';
 
 class ItemDetailPage extends Component {
 	constructor(props) {

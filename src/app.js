@@ -16,7 +16,7 @@ app.use(function(req, res, next) {
 });
 app.use(userRoutes);
 app.use(itemRoutes);
-app.use(express.static(path.join(__dirname, 'app/build')));
+app.use(express.static(path.join(__dirname, '../app/build')));
 
 app.listen(app.get('port'), function() {
 	console.log('Express server listening on port', app.get('port'));

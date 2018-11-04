@@ -4,7 +4,7 @@ function Footer() {
 	return (
 		<footer>
           <p>
-            This is the footer
+            Copyright 2018 Alberta Williams
           </p>
         </footer>
 	)
