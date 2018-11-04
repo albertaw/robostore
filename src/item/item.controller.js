@@ -17,7 +17,13 @@ function create(req, res, next) {
 }
 
 function read(req, res, next) {
-	res.send('read item');
+	const id = req.params.itemId;
+
+	const item = Item.find(function(elem) {
+		return elem.itemId == id;
+	});
+	
+	res.send(item);
 }
 
 function getSellers(req, res, next) {
