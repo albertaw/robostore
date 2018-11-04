@@ -2,11 +2,13 @@ import React from 'react';
 
 function Footer() {
 	return (
-		<footer>
-          <p>
-            Copyright 2018 Alberta Williams
-          </p>
-        </footer>
+		<footer class="footer yellow-bg">
+			<div class="container">
+        <p>
+          Copyright 2018 Alberta Williams
+        </p>
+      </div>
+    </footer>
 	)
 }
 

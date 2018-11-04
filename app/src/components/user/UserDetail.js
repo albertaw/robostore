@@ -6,7 +6,7 @@ function UserDetail(props) {
 	
 	return (
 		<li>
-			<Link to={path}>{props.name}</Link>
+			<Link to={path}><button class="button button-default button-dark button-pill">{props.name}</button></Link>
 		</li>
 	)
 }

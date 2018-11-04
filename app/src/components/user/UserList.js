@@ -10,7 +10,7 @@ function UserList(props) {
 	);
 
 	return (
-		<ul>{users}</ul>
+		<ul class="user-list">{users}</ul>
 	)
 }
 
