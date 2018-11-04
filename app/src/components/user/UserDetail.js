@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function UserDetail(props) {
-	const name = props.name.replace(/\s/g, '');
-	const path = 'users/' + name;
+	const path = '/users/' + props.id;
+	
 	return (
 		<li>
 			<Link to={path}>{props.name}</Link>

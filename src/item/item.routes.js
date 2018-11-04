@@ -7,7 +7,7 @@ module.exports = router
 
 router.post('/api/items', item.create);
 router.get('/api/items/:itemId', item.read);
-router.get('/api/items/:itemId/users', item.getUsers);
+router.get('/api/items/:itemId/users', item.getSellers);
 router.put('/api/items/:itemId', item.update);
 router.delete('/api/items/:itemId', item.remove);
 router.get('/api/items', item.readAll);

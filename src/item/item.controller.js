@@ -1,9 +1,10 @@
 const Item = require('./item.model');
+const User = require('../user/user.model');
 
 module.exports = {
 	create,
 	read,
-	getUsers,
+	getSellers,
 	update,
 	remove,
 	readAll,
@@ -19,8 +20,26 @@ function read(req, res, next) {
 	res.send('read item');
 }
 
-function getUsers(req, res, next) {
-	res.send('get users for item');
+function getSellers(req, res, next) {
+	//get the id of the item
+	const id = req.params.itemId;
+	//get all user id that own that item
+	const userIds = Item.filter(function(item) {
+		return item.itemId == id && item.owner == 'player';
+	}).map(function(item) {
+		return item.userId;
+	});
+	//filter the user list for the user ids
+	const userData = User.filter(function(user) {
+		for (let id of userIds) {
+			if (user.userId == id) {
+				return true;
+			}
+		}
+		return false;
+	});
+	
+	res.send(userData);
 }
 
 function update(req, res, next) {

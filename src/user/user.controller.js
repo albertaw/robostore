@@ -1,10 +1,12 @@
 let User = require('./user.model');
+let Item = require('../item/item.model');
 
 module.exports = {
 	create,
 	read,
 	update,
 	remove,
+	getItems,
 	readAll,
 	updateAll,
 	removeAll
@@ -24,6 +26,17 @@ function update(req, res, next) {
 
 function remove(req, res, next) {
 	res.send('remove user');
+}
+
+function getItems(req, res, next) {
+	//get the id of the user
+	const id = req.params.userId;
+	//get all items in the item list with that id
+	let items = Item.filter(function(item) {
+		return item.userId == id;
+	});
+
+	res.send(items);
 }
 
 function readAll(req, res, next) {

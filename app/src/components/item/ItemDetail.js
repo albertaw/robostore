@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function ItemDetail(props) {
-	let name = props.name.replace(/\s/g, '');
-	let path = 'items/' + name; 
+	let path = '/items/' + props.id; 
+	
 	return (
 		<li>
 			<Link to={path}><h3>{props.name}</h3></Link>

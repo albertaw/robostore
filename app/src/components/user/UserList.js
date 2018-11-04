@@ -5,6 +5,7 @@ function UserList(props) {
 	let users = props.users.map((user) =>
 		<UserDetail
 			key={user.userId}
+			id={user.userId}
 			name={user.name} />
 	);
 

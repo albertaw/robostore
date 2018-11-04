@@ -1,8 +1,8 @@
 let Item = [
 	{
-		id: 0,
+		key: 0,
 		itemId: 0, 
-		userId: '00', 
+		userId: 0, 
 		name: 'Orange Crystal Ball', 
 		sellable: true,
 		cost: '1.99',
@@ -12,9 +12,9 @@ let Item = [
 		url: 'https://s3.amazonaws.com/robochild.com/images/orange_crystal_ball.png'
 	},
 	{
-		id: 1,
+		key: 1,
 		itemId: 0, 
-		userId: '04', 
+		userId: 4, 
 		name: 'Orange Crystal Ball', 
 		sellable: true,
 		cost: '.99',
@@ -24,9 +24,9 @@ let Item = [
 		url: 'https://s3.amazonaws.com/robochild.com/images/orange_crystal_ball.png'
 	},
 	{
-		id: 2,
+		key: 2,
 		itemId: 0, 
-		userId: '05', 
+		userId: 5, 
 		name: 'Orange Crystal Ball', 
 		sellable: true,
 		cost: '.99',
@@ -36,9 +36,9 @@ let Item = [
 		url: 'https://s3.amazonaws.com/robochild.com/images/orange_crystal_ball.png'
 	},
 	{
-		id: 3,
+		key: 3,
 		itemId: 1, 
-		userId: '00', 
+		userId: 0, 
 		name: 'Purple Crystal Ball', 
 		sellable: true,
 		cost: '.99',
@@ -48,9 +48,9 @@ let Item = [
 		url: 'https://s3.amazonaws.com/robochild.com/images/purple_crystal_ball.png'
 	},
 	{
-		id: 4,
+		key: 4,
 		itemId: 2, 
-		userId: '01', 
+		userId: 1, 
 		name: 'Strawberry', 
 		sellable: true,
 		cost: '.99',
@@ -60,9 +60,9 @@ let Item = [
 		url: 'https://s3.amazonaws.com/robochild.com/images/strawberry.png'
 	},
 	{
-		id: 5,
+		key: 5,
 		itemId: 3, 
-		userId: '01', 
+		userId: 1, 
 		name: 'Banana', 
 		sellable: true,
 		cost: '.99',
@@ -72,9 +72,9 @@ let Item = [
 		url: 'https://s3.amazonaws.com/robochild.com/images/banana.png'
 	},
 	{
-		id: 6,
+		key: 6,
 		itemId: 4, 
-		userId: '01', 
+		userId: 1, 
 		name: 'Watermelon', 
 		sellable: true,
 		cost: '.99',
@@ -84,9 +84,9 @@ let Item = [
 		url: 'https://s3.amazonaws.com/robochild.com/images/watermelon.png'
 	},
 	{
-		id: 7,
+		key: 7,
 		itemId: 5, 
-		userId: '02', 
+		userId: 2, 
 		name: 'Ruby Gem', 
 		sellable: true,
 		cost: '.99',
@@ -96,9 +96,9 @@ let Item = [
 		url: 'https://s3.amazonaws.com/robochild.com/images/ruby_gem.png'
 	},
 	{
-		id: 8,
+		key: 8,
 		itemId: 6, 
-		userId: '02', 
+		userId: 2, 
 		name: 'Yellow Gem', 
 		sellable: true,
 		cost: '.99',
