@@ -32,10 +32,19 @@ class ItemDetailPage extends Component {
 	render() {
 		return (
 			<App>
-				<h2>{this.state.item.name}</h2>
-				<img src={this.state.item.url} alt={this.state.item.name} />
-				<h3>Other buying options</h3>
-				<UserList users={this.state.sellers} />
+				<div class="bg page-header yellow-bg">
+					<div class="container">
+						<h1>Buy now</h1>
+					</div>
+				</div>
+				<div class="section">
+					<div class="container">
+						<h2>{this.state.item.name}</h2>
+						<img class="item" src={this.state.item.url} alt={this.state.item.name} />
+						<h2>Other buying options</h2>
+						<UserList users={this.state.sellers} />
+					</div>
+				</div>
 			</App>
 		)
 	}

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
 	return (
-		<footer class="footer yellow-bg">
+		<footer class="footer dark-theme">
 			<div class="container">
         <p>
           Copyright 2018 Alberta Williams

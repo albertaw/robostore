@@ -14,7 +14,7 @@ h1, h2 {
 	margin-bottom: 16px;
 }
 
-.item-list img {
+.item-list img, .item {
 	width: 100px;
 }
 

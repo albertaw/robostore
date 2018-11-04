@@ -30,8 +30,16 @@ class UserDetailPage extends Component {
 	render() {
 		return (
 			<App>
-				<h2>{this.state.user.name}</h2>
-				<ItemList items={this.state.userItems} />
+				<div class="bg page-header yellow-bg">
+					<div class="container">
+						<h1>{this.state.user.name}</h1>
+					</div>
+				</div>
+				<div class="section">
+					<div class="container">
+						<ItemList items={this.state.userItems} />
+					</div>
+				</div>
 			</App>
 		)
 	}
