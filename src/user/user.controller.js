@@ -17,7 +17,13 @@ function create(req, res, next) {
 }
 
 function read(req, res, next) {
-	res.send('read user')
+	const id = req.params.userId;
+
+	const user = User.find(function(elem) {
+		return elem.userId == id;
+	});
+	
+	res.send(user);
 }
 
 function update(req, res, next) {

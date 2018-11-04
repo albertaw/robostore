@@ -7,22 +7,31 @@ class UserDetailPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			userItems: []
+			userItems: [],
+			//must be initialized
+			user: {}
 		}
 	}
 
 	componentDidMount() {
-		const path = 'http://localhost:4000/api/users/' + this.props.match.params.id + '/items';
-
-		axios.get(path)
-			.then(response => this.setState({userItems: response.data}));
-			console.log(this.props.match.params.id)
+		const itemPath = 'http://localhost:4000/api/users/' + this.props.match.params.id + '/items';
+		const userPath = 'http://localhost:4000/api/users/' + this.props.match.params.id;
+		axios.all([
+			axios.get(itemPath),
+			axios.get(userPath)
+			])
+			.then(axios.spread((items, user) => {
+				this.setState({userItems: items.data});
+				this.setState({user: user.data});
+				console.log(this.state.user)
+			}))
+			.catch(error => console.log(error));
 	}
 
 	render() {
 		return (
 			<App>
-				<h1>I am the user {this.props.match.params.id} page</h1>
+				<h2>{this.state.user.name}</h2>
 				<ItemList items={this.state.userItems} />
 			</App>
 		)
