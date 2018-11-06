@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+	<% include ../partials/head %>
+</head>
+<body>
+	<% include ../partials/header %>
+	<div class="bg page-header yellow-bg">
+		<div class="container">
+			<h1>Buy now</h1>
+		</div>
+	</div>
+	<div class="section">
+		<div class="container">
+			<h2><%= item.name %></h2>
+			<img class="item" src="<%= item.url %>" alt="<%= item.name %>" />
+			<h2>Other buying options</h2>
+			<ul class="user-list">
+				<% users.forEach(function(user) { %>
+					<li class="row">
+						<%= user.name %>
+					</li>
+				<% }) %>
+			</ul>
+		</div>
+	</div>
+	<% include ../partials/footer %>
+</body>

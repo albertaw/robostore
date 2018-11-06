@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/albertaw/robostore#readme",
   "dependencies": {
+    "axios": "^0.18.0",
+    "ejs": "^2.6.1",
     "express": "^4.16.4"
   }
 }
