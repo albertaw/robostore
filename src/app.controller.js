@@ -39,6 +39,7 @@ function getUser(req, res, next) {
 
 function getItems(req, res, next) {
   const path =  'http://' + host + ':' + port + '/api/items';
+  
   axios.get(path)
   .then(function(items) {
     res.render('pages/item-list', {items: items.data});
