@@ -197,10 +197,8 @@ ul {
 }
 
 .button-circle {
-  font-size: 2em;
-  width: 3em;
-  height: 3em;
-  line-height: 3em;
+  width: 10em;
+  height: 10em;
   border-radius: 100%;
 }
 
@@ -262,8 +260,8 @@ ul {
 
 .button-blue {
   color: #fff;
-  background-color: #228DFF;
-  border: 2px solid #228DFF;
+  background-color: #007bff;
+  border: 2px solid #007bff;
 }
 
 .button-dark:visited,
@@ -316,13 +314,13 @@ ul {
 .button-blue-o,
 .button-blue-o:visited,
 .button-blue-o:active {
-  border: 2px solid #228DFF;
+  border: 2px solid #007bff;
   color: #0072ff;
 }
 
 .button-blue-o:hover {
   color: #fff !important;
-  background-color: #228DFF;
+  background-color: #007bff;
 }
 
 .button-light-o,

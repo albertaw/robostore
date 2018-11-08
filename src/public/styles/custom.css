@@ -11,16 +11,15 @@ h1, h2 {
 }
 
 .user-list li {
-	margin-bottom: 16px;
+	margin-bottom: 1em;
 }
 
 .item-list img, .item {
 	width: 100px;
 }
 
-.item-list li a {
-	text-decoration: none;
-	color: #000;
+.item-list li, .item-detail li {
+	margin-bottom: 2em;
 }
 
 .yellow-bg {
