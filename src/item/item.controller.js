@@ -1,6 +1,6 @@
 const Item = require('./item.model');
 const User = require('../user/user.model');
-const InventoryItem = require('../InventoryItem/inventoryItem.model');
+const InventoryItem = require('../inventoryItem/inventoryItem.model');
 
 module.exports = {
 	create,
