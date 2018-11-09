@@ -1,6 +1,6 @@
 let User = require('./user.model');
 let Item = require('../item/item.model');
-
+let InventoryItem = require('../inventoryItem/inventoryItem.model');
 module.exports = {
 	create,
 	read,
@@ -36,11 +36,23 @@ function remove(req, res, next) {
 
 function getItems(req, res, next) {
 	//get the id of the user
-	const id = req.params.userId;
-	//get all items in the item list with that id
-	let items = Item.filter(function(item) {
-		return item.userId == id;
+	const userId = req.params.userId;
+	//get all itemids in the [inventory]item list with that userid
+	let itemIds = InventoryItem.filter(function(item) {
+		return item.userId == userId;
+	}).map(function(item) {
+		return item.itemId;
 	});
+	//filter the item list for the itemIds
+	let items = Item.filter(function(item) {
+	  for (let id of itemIds) {
+			if (id == item.itemId) {
+				return true;
+			}
+		}
+		return false;
+	});
+
 
 	res.send(items);
 }

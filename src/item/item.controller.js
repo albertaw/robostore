@@ -1,5 +1,6 @@
 const Item = require('./item.model');
 const User = require('../user/user.model');
+const InventoryItem = require('../InventoryItem/inventoryItem.model');
 
 module.exports = {
 	create,
@@ -28,24 +29,24 @@ function read(req, res, next) {
 
 function getSellers(req, res, next) {
 	//get the id of the item
-	const id = req.params.itemId;
-	//get all user id that own that item
-	const userIds = Item.filter(function(item) {
-		return item.itemId == id && item.owner == 'player';
+	const itemId = req.params.itemId;
+	//filter the inventoryItems for entries that have the itemId
+	const userIds = InventoryItem.filter(function(item) {
+		return item.itemId == itemId;
 	}).map(function(item) {
 		return item.userId;
 	});
-	//filter the user list for the user ids
-	const userData = User.filter(function(user) {
+	//get the users who are customers
+	const users = User.filter(function(user) {
 		for (let id of userIds) {
-			if (user.userId == id) {
+			if (user.userId == id && user.role == 'customer') {
 				return true;
 			}
 		}
 		return false;
 	});
 	
-	res.send(userData);
+	res.send(users);
 }
 
 function update(req, res, next) {
@@ -57,11 +58,23 @@ function remove(req, res, next) {
 }
 
 function readAll(req, res, next) {
-	//get the users who are merchants
-	let items = Item.filter(function(item) {
-		return item.owner == 'developer';
+	const productInfo = Item.map(function(item) {
+		for (let user of User){
+			if(user.userId == item.userId) {
+				return {
+					itemId: item.itemId, 
+					name: item.name,
+					cost: item.cost,
+					currency: item.currency,
+					amount: item.amount,
+					url: item.url,
+					userId: item.userId,
+					userName: user.name
+				}
+			}
+		}
 	});
-	res.send(items);
+	res.send(productInfo);
 }
 
 function updateAll(req, res, next) {

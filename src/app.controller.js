@@ -23,7 +23,7 @@ function getUsers(req, res, next) {
 
 function getUser(req, res, next) {
   const userPath = 'http://' + host + ':' + port + '/api/users/' + req.params.userId;
-  const itemPath = 'http://' + host + ':' + port + '/api/users/' + req.params.userId + '/items';
+  const itemPath = 'http://' + host + ':' + port + '/api/users/' + req.params.userId + '/inventoryItems';
   
   axios.all([
     axios.get(userPath),
