@@ -19,7 +19,7 @@
 					<div class="col-9">
 						<h3><%= item.name %></h3>
 						<p>$<%= item.cost %></p>
-						<button class="button button-default button-pill button-blue">Add to cart</button>
+						<button data-uid="<%= item.itemId %>" class="button button-default button-pill button-blue btn-add">Add to cart</button>
 					</div>
 				</li>
 			</div>
@@ -27,4 +27,5 @@
 		</div>
 	</div>
 	<% include ../partials/footer %>
+
 </body>

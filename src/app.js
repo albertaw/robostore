@@ -3,6 +3,8 @@ const http = require('http'),
 	express = require('express'),
 	userRoutes = require('./user/user.routes'),
 	itemRoutes = require('./item/item.routes'),
+	orderRoutes = require('./order/order.routes'),
+	orderItemRoutes = require('./orderItem/orderItem.routes'),
 	appRoutes = require('./app.routes'),
   port = process.env.PORT || 8080;
 
@@ -22,6 +24,8 @@ app.use(function(req, res, next) {
 });
 app.use(userRoutes);
 app.use(itemRoutes);
+app.use(orderRoutes);
+app.use(orderItemRoutes);
 app.use(appRoutes);
 
 

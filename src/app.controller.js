@@ -52,18 +52,22 @@ function getItems(req, res, next) {
 function getItem(req, res, next) {
   const itemPath = 'http://' + host + ':' + port + '/api/items/' + req.params.itemId;
   const sellersPath = 'http://' + host + ':' + port + '/api/items/' + req.params.itemId + '/users';
-    
+  
+  function handleClick(e) {
+    console.log('item clicked');
+  }
   axios.all([
     axios.get(itemPath),
     axios.get(sellersPath)
   ])
   .then(axios.spread((item, sellers) => {
-    res.render('pages/item-detail', {item: item.data, users: sellers.data});
+    res.render('pages/item-detail', {item: item.data, users: sellers.data, clickHandler: 'addToCart()' });
   }))
   .catch(function (error) {
     res.render('pages/error', {message: error});
   });
 }
+
 
 function getError(req, res, next) {
 	res.render('pages/error', {message: 'Page not found'});

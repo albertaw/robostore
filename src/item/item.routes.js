@@ -1,9 +1,8 @@
 const item = require('./item.controller');
 const express = require('express');
-
 const router = express.Router();
 
-module.exports = router
+module.exports = router;
 
 router.post('/api/items', item.create);
 router.get('/api/items/:itemId', item.read);
