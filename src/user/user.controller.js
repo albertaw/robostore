@@ -1,75 +1,76 @@
 let User = require('./user.model');
 let Item = require('../item/item.model');
-let InventoryItem = require('../inventoryItem/inventoryItem.model');
+
 module.exports = {
 	create,
 	read,
 	update,
 	remove,
-	getItems,
+	inventory,
 	readAll,
-	updateAll,
-	removeAll
 }
 
 function create(req, res, next) {
-	res.send('create user');
+	const user = new User(req.body);
+
+	user.save(function(err, user) {
+		if(err) res.send(err);
+		res.json(user);
+	});
 }
 
 function read(req, res, next) {
 	const id = req.params.userId;
 
-	const user = User.find(function(elem) {
-		return elem.userId == id;
+	User.findOne({userId: id}, function(err, user) {
+		if (err) res.send(err);
+		res.json(user);
 	});
-	
-	res.send(user);
 }
 
 function update(req, res, next) {
-	res.send('update user');
+	const id = req.params.userId;
+
+	User.findOne({userId: id}, function(err, user) {
+		if(err) res.send(err);
+		user.set(req.body);
+		user.save(function(err, updatedUser) {
+			res.json(updatedUser);
+		})
+		
+	});
 }
 
 function remove(req, res, next) {
-	res.send('remove user');
+	const id = req.params.userId;
+
+	User.findOneAndDelete({userId: id}, function(err, user) {
+		if (err) res.send(err);
+		res.json(user);
+	});
 }
 
-function getItems(req, res, next) {
-	//get the id of the user
-	const userId = req.params.userId;
-	//get all itemids in the [inventory]item list with that userid
-	let itemIds = InventoryItem.filter(function(item) {
-		return item.userId == userId;
-	}).map(function(item) {
-		return item.itemId;
-	});
-	//filter the item list for the itemIds
-	let items = Item.filter(function(item) {
-	  for (let id of itemIds) {
-			if (id == item.itemId) {
-				return true;
-			}
-		}
-		return false;
-	});
+//get inventory for a user
+function inventory(req, res, next) {
+	const id = req.params.userId;
 
-
-	res.send(items);
+	User.findOne({userId: id}, function(err, user) {
+		if (err) res.send(err)
+		const inventory = user.inventory.map(function(item){
+			return item.itemId;
+		});
+		//res.json(inventory);
+		Item.find({ itemId: {$in: inventory} }, function(err, items) {
+			if(err) res.send(err);
+			res.json(items);
+		})
+	});
 }
 
 function readAll(req, res, next) {
-	//get the users who are merchants
-	let users = User.filter(function(user) {
-		return user.role == 'developer';
+	User.find(function(err, users) {
+		if (err) res.send(err);
+		res.json(users);
 	});
-
-	res.json(users);
 }
 
-function updateAll(req, res, next) {
-	res.send('update all users');
-}
-
-function removeAll(req, res, next) {
-	res.send('remove all users');
-}

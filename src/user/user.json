@@ -1,0 +1,140 @@
+[
+	{
+		"userId": 0, 
+		"name": "Pokemon Go", 
+		"role": "developer", 
+		"walletId": 0,
+		"inventory": [
+			{
+				"itemId": 0, 
+				"userId": 0, 
+				"sellable": true,
+				"amount": 100
+			},
+			{
+				"itemId": 1, 
+				"userId": 0, 
+				"sellable": true,
+				"amount": 100
+			},
+			{
+				"itemId": 7,
+				"userId": 0,
+				"sellable": true,
+				"amount": 100
+			}
+		]
+	},
+	{
+		"userId": 1, 
+		"name": "Candy Crush", 
+		"role": "developer", 
+		"walletId": 1,
+		"inventory": [
+			{
+				"itemId": 2, 
+				"userId": 1, 
+				"sellable": true,
+				"amount": 100
+			},
+			{
+				"itemId": 3, 
+				"userId": 1, 
+				"sellable": true,
+				"amount": 100
+			},
+			{
+				"itemId": 4, 
+				"userId": 1,
+				"sellable": true,
+				"amount": 100
+			},
+			{
+				"itemId": 8,
+				"userId": 1,
+				"sellable": true,
+				"amount": 100
+			}
+		]
+	}, 
+	{
+		"userId": 2, 
+		"name": "Bejeweled", 
+		"role": "developer", 
+		"walletId": 2,
+		"inventory": [
+			{
+				"itemId": 5, 
+				"userId": 2, 
+				"sellable": true,
+				"amount": 100
+			},
+			{
+				"itemId": 6, 
+				"userId": 2,
+				"sellable": true,
+				"amount": 100
+			},
+			{
+				"itemId": 9,
+				"userId": 2,
+				"sellable": true,
+				"amount": 100
+			}
+		]
+	}, 
+	{
+		"userId": 3, 
+		"name": "Angry Birds", 
+		"role": "developer", 
+		"walletId": 3,
+		"inventory": [
+			{
+				"itemId": 10,
+				"userId": 3,
+				"sellable": true,
+				"amount": 100
+			}
+		]
+	},
+	{
+		"userId": 4, 
+		"name": "Roboberta", 
+		"role": "customer", 
+		"walletId": 4,
+		"inventory": [
+			{
+				"itemId": 0, 
+				"userId": 4, 
+				"sellable": true,
+				"amount": 100
+			},
+			{
+				"itemId": 7,
+				"userId": 4,
+				"sellable": true,
+				"amount": 50
+			}
+		]
+	},
+	{
+		"userId": 5, 
+		"name": "Alberta", 
+		"role": "customer", 
+		"walletId": 5,
+		"inventory": [
+			{
+				"itemId": 0, 
+				"userId": 5, 
+				"sellable": true,
+				"amount": 100
+			},
+			{
+				"itemId": 7,
+				"userId": 5,
+				"sellable": true,
+				"amount": 50
+			}
+		]
+	}
+]

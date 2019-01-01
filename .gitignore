@@ -1,3 +1,5 @@
 seed.sh
 src/order
 src/orderItem
+src/inventory
+.elasticbeanstalk
