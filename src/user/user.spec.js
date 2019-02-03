@@ -35,7 +35,7 @@ describe('User', function() {
 
 	it('should list all users', async function() {
 		const users = await axios.get(host + '/api/users')
-		expect(users.data.length).to.equal(6)
+		expect(users.data.length).to.equal(4)
 	});
 
 	it('shoulg get user inventory', async function() {

@@ -96,45 +96,5 @@
 				"amount": 100
 			}
 		]
-	},
-	{
-		"userId": 4, 
-		"name": "Roboberta", 
-		"role": "customer", 
-		"walletId": 4,
-		"inventory": [
-			{
-				"itemId": 0, 
-				"userId": 4, 
-				"sellable": true,
-				"amount": 100
-			},
-			{
-				"itemId": 7,
-				"userId": 4,
-				"sellable": true,
-				"amount": 50
-			}
-		]
-	},
-	{
-		"userId": 5, 
-		"name": "Alberta", 
-		"role": "customer", 
-		"walletId": 5,
-		"inventory": [
-			{
-				"itemId": 0, 
-				"userId": 5, 
-				"sellable": true,
-				"amount": 100
-			},
-			{
-				"itemId": 7,
-				"userId": 5,
-				"sellable": true,
-				"amount": 50
-			}
-		]
 	}
 ]

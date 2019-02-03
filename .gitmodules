@@ -1,0 +1,3 @@
+[submodule "robostore-react"]
+	path = robostore-react
+	url = https://github.com/albertaw/robostore-react
