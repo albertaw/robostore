@@ -1,3 +1,17 @@
+### Run MondgoDB
+
+`brew services start mongodb-community@4.2`
+
+or
+
+`mongod --config /usr/local/etc/mongod.conf --fork`
+
+
+### Run app
+
+`npm start`
+
+
 ### Users API
 
 POST /api/users
